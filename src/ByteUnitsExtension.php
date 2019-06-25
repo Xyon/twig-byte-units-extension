@@ -11,7 +11,7 @@ use Twig\TwigFilter;
 
 class ByteUnitsExtension extends AbstractExtension
 {
-    public function getFilters(): array
+    public function getFilters()
     {
         return [
             new TwigFilter(
@@ -33,28 +33,28 @@ class ByteUnitsExtension extends AbstractExtension
         ];
     }
 
-    public function getFormatedMetricValue(int $value, string $format = null, int $precision = Metric::DEFAULT_FORMAT_PRECISION, string $separator = ''): string
+    public function getFormatedMetricValue(int $value, string $format = null, int $precision = Metric::DEFAULT_FORMAT_PRECISION, string $separator = '')
     {
         $metric = new Metric($value, $precision);
 
         return $metric->format($format, $separator);
     }
 
-    public function getMetricBytes(int $value, int $precision = Metric::DEFAULT_FORMAT_PRECISION): string
+    public function getMetricBytes(int $value, int $precision = Metric::DEFAULT_FORMAT_PRECISION)
     {
         $binary = new Metric($value, $precision);
 
         return $binary->numberOfBytes();
     }
 
-    public function getFormatedBinaryValue(int $value, string $format = null, int $precision = Metric::DEFAULT_FORMAT_PRECISION, string $separator = ''): string
+    public function getFormatedBinaryValue(int $value, string $format = null, int $precision = Metric::DEFAULT_FORMAT_PRECISION, string $separator = '')
     {
         $binary = new Binary($value, $precision);
 
         return $binary->format($format, $separator);
     }
 
-    public function getBinaryBytes(int $value, int $precision = Metric::DEFAULT_FORMAT_PRECISION): string
+    public function getBinaryBytes(int $value, int $precision = Metric::DEFAULT_FORMAT_PRECISION)
     {
         $binary = new Binary($value, $precision);
 
