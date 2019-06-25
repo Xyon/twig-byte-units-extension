@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marek\Twig;
+namespace Xyon\Twig;
 
 use ByteUnits\Metric;
 use ByteUnits\Binary;
