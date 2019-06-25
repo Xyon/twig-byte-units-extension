@@ -1,5 +1,5 @@
 {
-    "name": "xyon/twig-byte-units-extension",
+    "name": "marioblazek/twig-byte-units-extension",
     "description": "Twig filters that format output of units of information by using ByteUnits library by Gabriele Lana",
     "keywords": [
         "templating",
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Xyon\\Twig\\": "src"
+            "Marek\\Twig\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Xyon\\Twig\\Tests\\": "tests"
+            "Marek\\Twig\\Tests\\": "tests"
         }
     },
     "scripts": {
