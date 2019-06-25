@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Marek\Twig;
 
 use ByteUnits\Metric;
